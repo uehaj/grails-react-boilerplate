@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TopLevelNavbar from './TopLevelNavbar.js'
+import AppLevelNavbar from './AppLevelNavbar.js'
 
 /**
  * Application top level structure.
@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <div>
         {/* Top level menu(NavBar)*/}
-        <TopLevelNavbar route={this.props.route} />
+        <AppLevelNavbar route={this.props.route} />
         {/* Page content */}
         {this.props.children}
         {/* Footer */}

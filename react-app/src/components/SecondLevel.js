@@ -4,7 +4,7 @@ import { CollapsibleNav, Navbar, NavBrand, Nav, NavItem, NavDropdown, MenuItem,
 import { Navigation } from 'react-router';
 import SecondLevelNavbar from './SecondLevelNavbar.js'
 
-export default class BookPage extends Component {
+export default class SecondLevel extends Component {
   render() {
     return (
       <div>

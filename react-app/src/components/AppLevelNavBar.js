@@ -3,7 +3,7 @@ import { CollapsibleNav, Navbar, NavBrand, Nav, NavItem, NavDropdown, MenuItem,
          Grid, Row, Col, Modal, Button, Well } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-export default class TopLevelNavbar extends Component {
+export default class AppLevelNavbar extends Component {
   render() {
     return (
         <Navbar fixedTop>

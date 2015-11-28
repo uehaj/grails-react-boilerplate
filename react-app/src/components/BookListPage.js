@@ -12,7 +12,7 @@ export default class BookListPage extends Component {
     return (
       <div>
         <Breadcrumbs wrapperElement="ol" itemElement="li" customClass="breadcrumb" separator="" routes={this.props.routes} />
-        <div style={{paddingLeft: '1em'}}>
+        <div style={{paddingLeft: '1em', paddingRight: '1em'}}>
           <BookList />
         </div>
       </div>
