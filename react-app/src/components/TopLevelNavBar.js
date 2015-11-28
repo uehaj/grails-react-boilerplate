@@ -6,7 +6,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 export default class TopLevelNavbar extends Component {
   render() {
     return (
-        <Navbar>
+        <Navbar fixedTop>
           <Navbar.Header>
             <Navbar.Brand><a href="#">React-Billing</a></Navbar.Brand>
             <Navbar.Toggle />

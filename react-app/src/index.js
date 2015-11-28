@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, IndexRedirect} from 'react-router';
-import createBrowserHistory from 'history/lib/createBrowserHistory'
-import P1 from './components/P1.js'
-import S1 from './components/S1.js'
-import 'bootstrap/dist/css/bootstrap.css'
-import '../css/stickey-footer.css'
+import createBrowserHistory from 'history/lib/createBrowserHistory';
+import P1 from './components/P1.js';
+import S1 from './components/S1.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import '../css/stickey-footer.css';
 
 import App from './components/App.js'
 import BookPage from './components/BookPage.js'

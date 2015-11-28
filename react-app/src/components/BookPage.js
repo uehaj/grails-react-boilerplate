@@ -11,7 +11,7 @@ export default class BookPage extends Component {
         {/* Generate second level menu(NavBar). */}
         <SecondLevelNavbar route={this.props.route} />
         {/* Page content. */}
-        <div style={{marginTop:60}}>
+        <div style={{marginTop:60, paddingTop: 60}}>
         {this.props.children}
         </div>
       </div>
