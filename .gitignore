@@ -9,7 +9,6 @@ dist
 *.bak
 target
 **/.asscache
-
 *.iws
 *Db.properties
 *Db.script
@@ -27,3 +26,4 @@ stacktrace.log
 /web-app/WEB-INF/classes
 /.link_to_grails_plugins/
 /target-eclipse/
+/web-app/js
