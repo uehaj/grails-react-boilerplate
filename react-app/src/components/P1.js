@@ -8,7 +8,7 @@ export default class P1 extends Component {
         {/* Generate second level menu(NavBar). */}
         <SecondLevelNavbar route={this.props.route} />
         {/* Page content. */}
-        <div style={{marginTop:60, paddingTop: 60}}>
+        <div style={{marginTop:60, paddingTop: 40}}>
         {this.props.children}
         </div>
       </div>

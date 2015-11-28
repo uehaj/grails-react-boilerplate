@@ -11,7 +11,10 @@ export default class BookListPage extends Component {
   render() {
     return (
       <div>
-        <BookList />
+        <Breadcrumbs wrapperElement="ol" itemElement="li" customClass="breadcrumb" separator="" routes={this.props.routes} />
+        <div style={{paddingLeft: '1em'}}>
+          <BookList />
+        </div>
       </div>
     );
   }

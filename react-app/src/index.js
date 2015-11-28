@@ -16,7 +16,7 @@ import BookListPage from './components/BookListPage.js'
  */
 ReactDOM.render(
     <Router history={createBrowserHistory()}>
-      <Route path="/" component={App}>
+      <Route name="TOP" path="/" component={App}>
         <IndexRedirect from="*" to="book"/>
         <Route path="book" name="BookPage" component={BookPage}>
           <IndexRedirect from="*" to="list"/>

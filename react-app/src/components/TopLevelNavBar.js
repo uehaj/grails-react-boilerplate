@@ -8,7 +8,7 @@ export default class TopLevelNavbar extends Component {
     return (
         <Navbar fixedTop>
           <Navbar.Header>
-            <Navbar.Brand><a href="#">React-Billing</a></Navbar.Brand>
+            <Navbar.Brand><a href="#">React/Grails Boilerplate</a></Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
