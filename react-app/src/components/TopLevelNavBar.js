@@ -13,7 +13,7 @@ export default class TopLevelNavbar extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              {/*画面最上行のメニュー(NavBar)の項目をルーティング情報から生成*/}
+              {/* Generate top level Navbar menu items from router. */}
               {this.props.route.childRoutes.map((item)=>{
                 return (
                   <LinkContainer key={item.path} to={"/"+item.path}>
@@ -21,12 +21,12 @@ export default class TopLevelNavbar extends Component {
                   </LinkContainer>);
               })}
             </Nav>
-            {/* 画面最上行のメニュー(NavBar)の右端部分のドロップダウンメニュー*/}
+            {/* Right side drop down menu items. */}
             <Nav pullRight>
               <NavDropdown eventKey={1} title="Dropdown" id="collapsible-nav-dropdown">
-                <MenuItem eventKey={1.1} href="#">TOPへ</MenuItem>
-                <MenuItem eventKey={1.2} href="#">パスワード変更</MenuItem>
-                <MenuItem eventKey={1.3} href="#">ログアウト</MenuItem>
+                <MenuItem eventKey={1.1} href="#">TOP</MenuItem>
+                <MenuItem eventKey={1.2} href="#">Change Password</MenuItem>
+                <MenuItem eventKey={1.3} href="#">Logout</MenuItem>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
