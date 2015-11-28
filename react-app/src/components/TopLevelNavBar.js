@@ -16,7 +16,7 @@ export default class TopLevelNavbar extends Component {
               {/*画面最上行のメニュー(NavBar)の項目をルーティング情報から生成*/}
               {this.props.route.childRoutes.map((item)=>{
                 return (
-                  <LinkContainer to={"/"+item.path}>
+                  <LinkContainer key={item.path} to={"/"+item.path}>
                     <NavItem>{item.name}</NavItem>
                   </LinkContainer>);
               })}
