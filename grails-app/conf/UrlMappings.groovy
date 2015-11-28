@@ -7,8 +7,8 @@ class UrlMappings {
             }
         }
 
-        //        "/"(redirect:"/index.html")
-        "/"(redirect:"/index.html")
+        // Do not show index.gsp
+        //        "/"(redirect:"/index.gsp")
         "500"(view:'/error')
 	}
 }
