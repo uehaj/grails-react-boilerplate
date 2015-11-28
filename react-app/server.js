@@ -8,7 +8,7 @@ new WebpackDevServer(webpack(config), {
   hot: true,
   historyApiFallback: true,
   proxy: {
-    '/rest-react-test/*': "http://localhost:8080",
+    '/api/*': "http://localhost:8080", // Proxy to running Grails application.
   },
 }).listen(3000, 'localhost', function (err, result) {
   if (err) {

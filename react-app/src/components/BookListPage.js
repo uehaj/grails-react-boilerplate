@@ -4,11 +4,13 @@ import { CollapsibleNav, Navbar, NavBrand, Nav, NavItem, NavDropdown, MenuItem,
 import * as ajax from '../ajax';
 import { LinkContainer } from 'react-router-bootstrap';
 
+import BookList from './BookList.js'
+
 export default class BookListPage extends Component {
   render() {
     return (
       <div>
-        BookListPage
+        <BookList />
       </div>
     );
   }

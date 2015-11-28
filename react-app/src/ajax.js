@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-const urlBase = 'http://localhost:3000/rest-react-test/'
+const urlBase = 'http://localhost:3000/api/'
 
 /**
  * Ajax functions.
