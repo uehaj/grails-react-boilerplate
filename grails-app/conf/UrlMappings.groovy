@@ -7,10 +7,8 @@ class UrlMappings {
             }
         }
 
-        "/api/$controller/$action?/$id?(.$format)?"{
-            constraints {
-                // apply constraints here
-            }
+        "/api/books/$action?/$id?(.$format)?"{
+          controller = 'book'
         }
 
         // Do not show index.gsp

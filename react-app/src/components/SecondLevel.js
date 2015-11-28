@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { CollapsibleNav, Navbar, NavBrand, Nav, NavItem, NavDropdown, MenuItem,
-         Grid, Row, Col, Modal, Button, Well } from 'react-bootstrap';
-import { Navigation } from 'react-router';
 import SecondLevelNavbar from './SecondLevelNavbar.js'
 
 export default class SecondLevel extends Component {

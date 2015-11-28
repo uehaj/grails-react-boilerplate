@@ -8,6 +8,7 @@ import '../css/stickey-footer.css';
 import App from './components/App.js'
 import SecondLevel from './components/SecondLevel.js'
 import BookListPage from './components/BookListPage.js'
+import BookShowPage from './components/BookShowPage.js'
 import S1 from './components/S1.js';
 import S2 from './components/S2.js';
 
@@ -20,13 +21,13 @@ ReactDOM.render(
         <IndexRedirect from="*" to="book" />
         <Route path="book" name="Book" component={SecondLevel}>
           <IndexRedirect from="*" to="index" />
-          <Route path="index" name="Index" component={BookListPage}>
+          <Route path="index" name="Index" component={BookListPage} />
+          <Route path="show/:targetId" name="Show" component={BookShowPage} />
     {/*
           <Route path="new" name="New" component={BookNewPage}>
           <Route path="delete" name="Delege" component={BookDeletePage}>
           <Route path="edit" name="Edit" component={BookEditPage}>
      */}
-          </Route>
         </Route>
         <Route path="p1" name="P1" component={SecondLevel}>
           <IndexRedirect from="*" to="s1"/>
