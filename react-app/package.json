@@ -1,16 +1,17 @@
 {
-  "name": "react-hot-boilerplate",
-  "version": "1.0.1",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "name": "grails-react-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Grails+ReactJS project with hot code reloading",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "url": "https://github.com/uehaj/grails-react-boilerplate"
   },
   "keywords": [
+    "grails",
     "react",
     "reactjs",
     "boilerplate",
@@ -21,12 +22,12 @@
     "edit",
     "webpack"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "UEHARA Junji <uehaj@jggug.org> (http://github.com/uehaj)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/uehaj/grails-react-boilerplate/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/uehaj/grails-react-boilerplate",
   "devDependencies": {
     "babel-core": "^6.0.20",
     "babel-eslint": "^4.1.3",
@@ -38,7 +39,6 @@
     "css-loader": "^0.23.0",
     "eslint-plugin-react": "^3.6.2",
     "file-loader": "^0.8.4",
-    "fixed-data-table": "^0.5.0",
     "history": "^1.13.0",
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
@@ -49,7 +49,6 @@
     "react-hot-loader": "^1.3.0",
     "react-router": "^1.0.0-rc4",
     "react-router-bootstrap": "^0.19.3",
-    "react-treeview": "^0.4.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.2",
