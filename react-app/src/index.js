@@ -11,6 +11,9 @@ import App from './components/App.js'
 import BookPage from './components/BookPage.js'
 import BookListPage from './components/BookListPage.js'
 
+/**
+ * Page structure.
+ */
 ReactDOM.render(
     <Router history={createBrowserHistory()}>
       <Route path="/" component={App}>

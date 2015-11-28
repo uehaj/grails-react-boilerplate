@@ -8,8 +8,9 @@ export default class BookPage extends Component {
   render() {
     return (
       <div>
-        {/*2行目のメニュー(NavBar)をルーティング情報から生成する*/}
+        {/* Generate second level menu(NavBar). */}
         <SecondLevelNavbar route={this.props.route} />
+        {/* Page content. */}
         <div style={{marginTop:60}}>
         {this.props.children}
         </div>
