@@ -19,7 +19,6 @@ ReactDOM.render(
       <Route name="TOP" path="/" component={App}>
         <IndexRedirect from="*" to="book" />
         <Route path="book" name="Book" component={SecondLevel}>
-          <IndexRedirect from="*" to="index" />
           <IndexRoute component={BookIndexPage} />
           <Route path="s1" name="S1" component={S1}>
           </Route>

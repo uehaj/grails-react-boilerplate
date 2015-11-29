@@ -39,7 +39,6 @@ class AppLevelNavbar extends Component {
           <Navbar.Collapse>
             <Nav>
               {/* Generate top level Navbar menu items from router. */}
-              {/* TODO: Handle IndexRoute */}
               {this.props.route.childRoutes.map((item)=>{
                 return (
                   <LinkContainer key={item.path} to={"/"+item.path}>
