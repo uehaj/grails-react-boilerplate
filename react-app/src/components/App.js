@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import AppLevelNavbar from './AppLevelNavbar.js'
+import { CollapsibleNav, Navbar, NavBrand, Nav, NavItem, NavDropdown, MenuItem,
+         Grid, Row, Col, Modal, Button, Well } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 /**
  * Application top level structure.
@@ -22,3 +24,40 @@ export default class App extends Component {
     );
   }
 }
+
+/**
+ * Application level (toplevel) navbar.
+ */
+class AppLevelNavbar extends Component {
+  render() {
+    return (
+        <Navbar fixedTop>
+          <Navbar.Header>
+            <Navbar.Brand><a href="#">React/Grails Boilerplate</a></Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav>
+              {/* Generate top level Navbar menu items from router. */}
+              {/* TODO: Handle IndexRoute */}
+              {this.props.route.childRoutes.map((item)=>{
+                return (
+                  <LinkContainer key={item.path} to={"/"+item.path}>
+                    <NavItem>{item.name}</NavItem>
+                  </LinkContainer>);
+              })}
+            </Nav>
+            {/* Right side drop down menu items. */}
+            <Nav pullRight>
+              <NavDropdown eventKey={1} title="Dropdown" id="collapsible-nav-dropdown">
+                <MenuItem eventKey={1.1} href="#">TOP</MenuItem>
+                <MenuItem eventKey={1.2} href="#">Change Password</MenuItem>
+                <MenuItem eventKey={1.3} href="#">Logout</MenuItem>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+    );
+  }
+}
+
