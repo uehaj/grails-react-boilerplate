@@ -24,11 +24,12 @@ export default class BookList extends Component {
     this.setState({ page: page, sizePerPage: sizePerPage })
   }
   titleFormatter(cell, row){
-    return <a onClick={this.handleRowClick.bind(this, row)}>{cell}</a>;
+    return <a onClick={this.handleTitleClicked.bind(this, row)}>{cell}</a>;
   }
-  handleRowClick(row) {
-    this.setState({selectedBookId:row.id})
-    return false
+  handleTitleClicked(row) {
+    console.log(row.id)
+    this.setState({ selectedBookId:row.id });
+    return false;
   }
   render() {
     return (<div>

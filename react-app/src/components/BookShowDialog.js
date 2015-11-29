@@ -16,22 +16,22 @@ export default class BookShowDialog extends Component {
     super(props);
     this.state = { book:null };
   }
-  componentDidMount() {
-    if (this.props.selectedBookId) {
-      ajax.getBook(this.props.selectedBookId, (data) => {
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedBookId) {
+      ajax.getBook(nextProps.selectedBookId, (data) => {
+        console.log(data)
         this.setState({ book: data });
       })
     }
   }
+
   render() {
-    if (!this.state.book) {
-      return <div />
-    }
     return (
-      <ModalDialog title='契約情報' show={this.props.selectedBookId != null} close={this.props.close}>
+      <ModalDialog title={this.state.book ? this.state.book.title : 'loading..'} show={this.props.selectedBookId != null} close={this.props.close}>
         <form className="form-horizontal">
-        <FormControls.Static label="Title:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" value={this.state.book.title} />
-        <FormControls.Static label="Price:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" value={this.state.book.price} />
+        <FormControls.Static label="Title:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" value={this.state.book ? this.state.book.title : 'loading..'} />
+        <FormControls.Static label="Price:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" value={this.state.book ? this.state.book.price : 'loading..'} />
         </form>
       </ModalDialog>
     );
