@@ -22,7 +22,6 @@ export default class BookShowDialog extends Component {
     }
   }
   render() {
-    console.log(this.props)
     return (
       <ModalDialog show={this.props.selectedBookId != null} close={this.props.close}>
         <div>This is body</div>

@@ -27,7 +27,6 @@ export default class BookList extends Component {
     return <a onClick={this.handleRowClick.bind(this, row)}>{cell}</a>;
   }
   handleRowClick(row) {
-    console.log(row)
     this.setState({selectedBookId:row.id})
     return false
   }

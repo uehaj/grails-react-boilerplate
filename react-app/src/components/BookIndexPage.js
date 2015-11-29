@@ -3,7 +3,7 @@ import Breadcrumbs from 'react-breadcrumbs';
 
 import BookList from './BookList.js'
 
-export default class BookListPage extends Component {
+export default class BookIndexPage extends Component {
   render() {
     return (
       <div>
