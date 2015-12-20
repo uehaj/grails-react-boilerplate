@@ -28,10 +28,13 @@ export default class BookShowDialog extends Component {
 
   render() {
     return (
-      <ModalDialog title={this.state.book ? this.state.book.title : 'loading..'} show={this.props.selectedBookId != null} close={this.props.close}>
+      <ModalDialog title={this.state.book ? this.state.book.title : 'loading..'}
+                   show={this.props.show}
+                   close={this.props.close}
+                   additionalButton={<span><Button bsStyle="success" onClick={this.props.editButtonAction}>Edit</Button></span>}>
         <form className="form-horizontal">
-        <FormControls.Static label="Title:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" value={this.state.book ? this.state.book.title : 'loading..'} />
-        <FormControls.Static label="Price:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" value={this.state.book ? this.state.book.price : 'loading..'} />
+          <FormControls.Static label="Title:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" value={this.state.book ? this.state.book.title : 'loading..'} />
+          <FormControls.Static label="Price:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" value={this.state.book ? this.state.book.price : 'loading..'} />
         </form>
       </ModalDialog>
     );

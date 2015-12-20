@@ -26,5 +26,11 @@ module.exports = {
       loader: 'url-loader?limit=100000'
     }
     ]
-  }
+  },
+  plugins: [
+      new webpack.ProvidePlugin({
+         $: "jquery",
+         jQuery: "jquery"
+     })
+  ]
 };

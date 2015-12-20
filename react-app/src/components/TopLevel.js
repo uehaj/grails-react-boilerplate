@@ -6,15 +6,13 @@ import { LinkContainer } from 'react-router-bootstrap';
 /**
  * Application top level structure.
  */
-export default class App extends Component {
+export default class TopLevel extends Component {
   render() {
     return (
       <div>
         {/* Top level menu(NavBar)*/}
-        <AppLevelNavbar route={this.props.route} />
-        {/* Page content */}
+        <TopLevelNavbar route={this.props.route} />
         {this.props.children}
-        {/* Footer */}
         <footer className="footer">
           <div className="container">
             <p className="text-muted">Place sticky footer content here.</p>
@@ -26,9 +24,9 @@ export default class App extends Component {
 }
 
 /**
- * Application level (toplevel) navbar.
+ * Top level menu navbar.
  */
-class AppLevelNavbar extends Component {
+class TopLevelNavbar extends Component {
   render() {
     return (
         <Navbar fixedTop>
@@ -59,4 +57,3 @@ class AppLevelNavbar extends Component {
     );
   }
 }
-
