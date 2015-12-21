@@ -13,7 +13,7 @@ import S2 from './components/S2.js';
 import Test from './components/Test.js';
 
 /**
- * Page structure.
+ * Structure of menu/pages.
  */
 ReactDOM.render(
     <Router history={createBrowserHistory()}>
@@ -23,11 +23,6 @@ ReactDOM.render(
           <IndexRoute component={BookIndexPage} />
           <Route path="s1" name="S1" component={S1}>
           </Route>
-    {/*
-          <Route path="new" name="New" component={BookNewPage} />
-          <Route path="delete" name="Delege" component={BookDeletePage} />
-          <Route path="edit" name="Edit" component={BookEditPage} />
-     */}
         </Route>
         <Route path="p1" name="P1" component={SecondLevel}>
           <IndexRedirect from="*" to="s1"/>
