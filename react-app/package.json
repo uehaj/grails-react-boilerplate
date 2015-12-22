@@ -4,8 +4,8 @@
   "description": "Boilerplate for Grails+React project with hot code reloading",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint src",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.config.js"
+    "deploy": "webpack -p --config webpack.config.js",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
