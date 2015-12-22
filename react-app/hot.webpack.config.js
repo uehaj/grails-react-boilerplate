@@ -1,5 +1,5 @@
-var webpack = require('webpack');
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
@@ -16,24 +16,28 @@ module.exports = {
       port: 3000
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../web-app/js'),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/js/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     //     new ExtractTextPlugin('style.css', {allChunks: true}),
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
     }),
     function () {
-        this.plugin("done", function (stats) {
-            stats = stats.toJson();
-            console.error(JSON.stringify({
-                assetsByChunkName: stats.assetsByChunkName
-            }));
-        });
+      this.plugin("done", function (stats) {
+        stats = stats.toJson();
+        console.error(JSON.stringify({
+          assetsByChunkName: stats.assetsByChunkName
+        }));
+      });
     }
   ],
   stats: {
@@ -45,6 +49,14 @@ module.exports = {
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
+    },
+    {
+      test: /\.css$/,
+      loader: "style-loader!css-loader"
+    },
+    {
+      test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+      loader: 'url-loader?limit=100000'
     }]
   }
 };

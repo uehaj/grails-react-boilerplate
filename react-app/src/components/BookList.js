@@ -16,8 +16,6 @@ export default class BookList extends Component {
   constructor(props) {
     super(props);
     this.state = { bookList:[],
-                   page:1,
-                   sizePerPage:10,
                    showShowDialog:false,
                    showEditDialog:false,
                    selectedBookId:null };
@@ -26,9 +24,6 @@ export default class BookList extends Component {
     ajax.getBooks((data) => {
       this.setState({ bookList: data });
     })
-  }
-  handlePageChange(page, sizePerPage) {
-    this.setState({ page: page, sizePerPage: sizePerPage })
   }
   handleRowClicked(row) {
     this.setState({ selectedBookId: row.id,
@@ -46,28 +41,18 @@ export default class BookList extends Component {
                      showFormDialog: false } )
     })
   }
-  handleSizePerPageList(sizePerPage) {
-    alert(sizePerPage)
-    this.setState({sizePerPage:sizePerPage})
-  }
   render() {
     return (<div>
               <h1>Book</h1>
               <BootstrapTable data={this.state.bookList}
-                              height="480"
-                              hover condensed insertRow deleteRow pagination
+                              hover condensed insertRow deleteRow
+                              height="430"
                               selectRow={{
                                   mode: 'checkbox',
                                   bgColor: "rgb(238, 193, 213)",
                               }}
                               options={{
-                                  page: this.state.page,
-                                  sizePerPage: this.state.sizePerPage,
-                                  sizePerPageList: [5,10,20],
-                                  onPageChange: this.handlePageChange.bind(this),
-                                  onRowClick: this.handleRowClicked.bind(this),
-                                  onSizePerPageList: this.handleSizePerPageList.bind(this)
-
+                                  onRowClick: this.handleRowClicked.bind(this)
                                 }}
                               >
                 <TableHeaderColumn dataField="id" dataSort={true} isKey={true} width="150">ID</TableHeaderColumn>

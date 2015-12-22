@@ -5,6 +5,15 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 /**
  * Second level structure.
+ *
+ * +-TopLevel--------------+
+ * | TopLevelNavbar        |
+ * | +-SecondLevel-------+ |
+ * | | SecondLevelNavBar | |
+ * | | {childlen}        | |
+ * | +-------------------+ |
+ * | footer                |
+ * +-----------------------+
  */
 export default class SecondLevel extends Component {
   render() {

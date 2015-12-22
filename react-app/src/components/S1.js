@@ -7,7 +7,7 @@ export default class S1 extends Component {
       <div>
         <Breadcrumbs wrapperElement="ol" itemElement="li" customClass="breadcrumb" separator="" routes={this.props.routes} />
         <div style={{paddingLeft: '1em'}}>
-        S1
+        S1. In react-router, page can be appear arbitrary menu positions.
         </div>
       </div>
     );

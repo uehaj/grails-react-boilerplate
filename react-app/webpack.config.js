@@ -11,6 +11,12 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/js/'
   },
+  plugins: [
+      new webpack.ProvidePlugin({
+         $: "jquery",
+         jQuery: "jquery"
+     })
+  ],
   module: {
     loaders: [{
       test: /\.js$/,
@@ -24,13 +30,6 @@ module.exports = {
     {
       test: /\.(png|woff|woff2|eot|ttf|svg)$/,
       loader: 'url-loader?limit=100000'
-    }
-    ]
-  },
-  plugins: [
-      new webpack.ProvidePlugin({
-         $: "jquery",
-         jQuery: "jquery"
-     })
-  ]
+    }]
+  }
 };

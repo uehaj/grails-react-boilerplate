@@ -5,12 +5,22 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 /**
  * Application top level structure.
+ *
+ * +-TopLevel--------------+
+ * | TopLevelNavbar        |
+ * | +-SecondLevel-------+ |
+ * | | SecondLevelNavBar | |
+ * | | {childlen}        | |
+ * | +-------------------+ |
+ * | footer                |
+ * +-----------------------+
+ *
  */
 export default class TopLevel extends Component {
   render() {
     return (
       <div>
-        {/* Top level menu(NavBar)*/}
+        {/* Top level menu(Navbar)*/}
         <TopLevelNavbar route={this.props.route} />
         {this.props.children}
         <footer className="footer">

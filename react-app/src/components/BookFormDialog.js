@@ -5,7 +5,6 @@ import { CollapsibleNav, Navbar, NavBrand, Nav, NavItem, NavDropdown, MenuItem,
          Grid, Row, Col, Modal, Button, Well, Input } from 'react-bootstrap';
 import {FormControls} from 'react-bootstrap';
 import 'react-bootstrap-table/css/react-bootstrap-table-all.min.css';
-import getFormData from 'get-form-data'
 import ModalDialog from './ModalDialog';
 import * as ajax from '../ajax';
 
