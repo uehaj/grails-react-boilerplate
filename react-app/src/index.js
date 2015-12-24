@@ -4,6 +4,7 @@ import {Router, Route, IndexRoute, IndexRedirect} from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/stickey-footer.css';
+import 'bootstrap';
 
 import {TopLevel,SecondLevel,NotFound} from './components/navi/navi'
 import BookIndexPage from './components/BookIndexPage'

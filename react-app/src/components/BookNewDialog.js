@@ -9,20 +9,12 @@ import ModalDialog from './ModalDialog';
 import * as ajax from '../ajax';
 
 /**
- * Form for edit existing Book Domain class on a modal dialog.
+ * Form for create Book Domain class on a modal dialog.
  */
-export default class BookFormDialog extends Component {
+export default class BookNewDialog extends Component {
   constructor(props) {
     super(props);
     this.state = { book:null };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.selectedBookId) {
-      ajax.getBook(nextProps.selectedBookId, (data) => {
-        this.setState({ book: data });
-      })
-    }
   }
 
   callbackSubmitButtonAction() {
@@ -34,10 +26,10 @@ export default class BookFormDialog extends Component {
 
   render() {
     return (
-      <ModalDialog title={'Edit: ' + (this.state.book && this.state.book.title)}
+      <ModalDialog title="New Book"
                    show={this.props.show}
                    close={this.props.close}
-                   additionalButton={<Button bsStyle="success" onClick={this.callbackSubmitButtonAction.bind(this)}>Update</Button>}>
+                   additionalButton={<Button bsStyle="success" onClick={this.callbackSubmitButtonAction.bind(this)}>Create</Button>}>
         <form ref='form' className="form-horizontal">
           <Input ref="title" type="text" label="Title:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" defaultValue={this.state.book && this.state.book.title} />
           <Input ref="price" type="text" label="Price:" labelClassName="key col-xs-2" wrapperClassName="col-xs-10" defaultValue={this.state.book && this.state.book.price} />

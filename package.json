@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "start": "cd react-app; npm start",
+    "deploy": "cd react-app; npm run-script deploy",
+    "lint": "cd react-app; npm run-script lint"
+  }
+}

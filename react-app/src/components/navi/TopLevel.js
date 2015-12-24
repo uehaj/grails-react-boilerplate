@@ -57,9 +57,9 @@ class TopLevelNavbar extends Component {
             {/* Right side drop down menu items. */}
             <Nav pullRight>
               <NavDropdown eventKey={1} title="Dropdown" id="collapsible-nav-dropdown">
-                <MenuItem eventKey={1.1} href="#">TOP</MenuItem>
-                <MenuItem eventKey={1.2} href="#">Change Password</MenuItem>
-                <MenuItem eventKey={1.3} href="#">Logout</MenuItem>
+                <MenuItem eventKey={1.1} href="/">TOP</MenuItem>
+                <MenuItem eventKey={1.2} href="/changepassword">Change Password</MenuItem>
+                <MenuItem eventKey={1.3} href="/logout">Logout</MenuItem>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
