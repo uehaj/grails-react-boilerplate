@@ -12,10 +12,10 @@ module.exports = {
     publicPath: '/js/'
   },
   plugins: [
-      new webpack.ProvidePlugin({
-         $: "jquery",
-         jQuery: "jquery"
-     })
+    new webpack.ProvidePlugin({
+       $: "jquery",
+       jQuery: "jquery"
+    })
   ],
   module: {
     loaders: [{
