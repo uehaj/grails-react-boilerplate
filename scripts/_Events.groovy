@@ -7,7 +7,7 @@ eventCompileStart = {kind ->
 private void executeWebpack(){
     try {
         event("StatusUpdate", ["Compile and bundle js files..."])
-        def proc = ["sh", "-c", "(cd react-app; npm run-script deploy)"].execute()
+        def proc = "npm run-script deploy".execute()
         proc.waitFor()
         if(proc.exitValue() != 0){
             println "| Error! js compile failed : ${proc.err.text}"
