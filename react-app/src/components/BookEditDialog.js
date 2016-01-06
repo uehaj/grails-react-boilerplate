@@ -11,7 +11,7 @@ import * as ajax from '../ajax';
 /**
  * Form for edit existing Book Domain class on a modal dialog.
  */
-export default class BookFormDialog extends Component {
+export default class BookEditDialog extends Component {
   constructor(props) {
     super(props);
     this.state = { book:null };

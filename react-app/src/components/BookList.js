@@ -8,7 +8,7 @@ import 'react-bootstrap-table/css/react-bootstrap-table-all.min.css';
 
 import BookNewDialog from './BookNewDialog';
 import BookShowDialog from './BookShowDialog';
-import BookFormDialog from './BookFormDialog';
+import BookEditDialog from './BookEditDialog';
 import ModalDialog from './ModalDialog';
 import * as ajax from '../ajax';
 
@@ -40,8 +40,8 @@ export default class BookList extends Component {
     this.setState({ selectedBookId: row.id,
                     showShowDialog: true});
   }
-  showFormDialog() {
-    this.setState({ showFormDialog: true,
+  showEditDialog() {
+    this.setState({ showEditDialog: true,
                     showShowDialog: false});
   }
   createBook(creatingBook) {
@@ -54,7 +54,7 @@ export default class BookList extends Component {
     })
   }
   updateBook(updatedBook) {
-    this.setState({showFormDialog: false})
+    this.setState({showEditDialog: false})
     ajax.updateBook(this.state.selectedBookId, updatedBook, ()=>{
       // Locally update data.
       this.setState({bookList: this.state.bookList.map((book)=>(book.id === this.state.selectedBookId) ?
@@ -100,10 +100,10 @@ export default class BookList extends Component {
               <BookShowDialog show={this.state.showShowDialog}
                               selectedBookId={this.state.selectedBookId}
                               close={()=>this.setState({showShowDialog:false})}
-                              editButtonAction={this.showFormDialog.bind(this)}/>
-              <BookFormDialog show={this.state.showFormDialog}
+                              editButtonAction={this.showEditDialog.bind(this)}/>
+              <BookEditDialog show={this.state.showEditDialog}
                               selectedBookId={this.state.selectedBookId}
-                              close={()=>this.setState({showFormDialog:false})}
+                              close={()=>this.setState({showEditDialog:false})}
                               submitButtonAction={this.updateBook.bind(this)}/>
               <ModalDialog title="Error"
                            show={this.state.showErrorDialog}
