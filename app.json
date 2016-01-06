@@ -1,0 +1,6 @@
+{
+  "name": "React/Grails Bilerplate Sample",
+  "description": "A sample code for React frontend SPA client with Grails Restful backend server.",
+  "repository": "https://github.com/uehaj/grails-react-boilerplate",
+  "keywords": ["grails", "react"]
+}
